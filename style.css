@@ -71,7 +71,13 @@
     font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .logo-mark { width: 26px; height: 26px; flex-shrink: 0; }
+  @media (max-width: 480px) {
+    .logo-text, .logo .cursor { display: none; }
+    .logo-mark { width: 24px; height: 24px; }
   }
   .logo .cursor {
     display: inline-block;
