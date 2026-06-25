@@ -273,6 +273,79 @@
   .table-wrap tr:last-child td { border-bottom: none; }
   .table-wrap { overflow-x: auto; }
 
+  /* ---------- SERVICES (categorized, numbered cards) ---------- */
+  .svc-category { margin-top: 56px; }
+  .svc-category:first-of-type { margin-top: 40px; }
+  .svc-cmd {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  .svc-cmd::before { content: "$ "; color: var(--amber); }
+  .svc-category h3 {
+    font-size: clamp(19px, 2.4vw, 24px);
+    margin-bottom: 10px;
+  }
+  .svc-intro {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 680px;
+    margin-bottom: 24px;
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .svc-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 900px) { .svc-grid, .svc-grid-2 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .svc-grid, .svc-grid-2 { grid-template-columns: 1fr; } }
+  .svc-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 18px;
+    transition: border-color 0.15s ease;
+  }
+  .svc-card:hover { border-color: var(--amber-dim); }
+  .svc-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--amber-dim);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
+  .svc-card h4 {
+    font-family: var(--mono);
+    color: var(--text-bright);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .svc-card p {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .svc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .svc-tags span {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--amber);
+    background: rgba(255, 153, 0, 0.08);
+    border: 1px solid var(--amber-dim);
+    border-radius: 100px;
+    padding: 3px 9px;
+    letter-spacing: 0.02em;
+  }
+
   /* ---------- PACKAGES ---------- */
   .pkg-grid {
     display: grid;
